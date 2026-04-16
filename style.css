@@ -1,0 +1,39 @@
+body {
+  text-align: center;
+  background: #eee;
+}
+
+.page {
+  position: relative;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.page img {
+  width: 100%;
+}
+
+/* الحقول */
+.field {
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+}
+
+/* مثال مواقع (سنعدلها لاحقًا بدقة) */
+#name { top: 420px; left: 150px; width: 200px; }
+#license { top: 390px; left: 150px; width: 200px; }
+#email { top: 500px; left: 150px; width: 200px; }
+#phone { top: 530px; left: 150px; width: 200px; }
+
+.check {
+  position: absolute;
+}
+
+/* مثال checkbox */
+#flight { top: 300px; left: 120px; }
+#meteorology { top: 330px; left: 120px; }
+
+#signature { top: 250px; left: 100px; width: 200px; }
+#date { top: 250px; left: 500px; width: 150px; }
