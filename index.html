@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exam Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+
+<h2>Exam Form Filler</h2>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page" id="page1">
+  <img src="page1.jpg">
+
+  <input class="field" id="name" placeholder="Name">
+  <input class="field" id="license" placeholder="License">
+  <input class="field" id="email" placeholder="Email">
+  <input class="field" id="phone" placeholder="Phone">
+
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page" id="page2">
+  <img src="page2.jpg">
+
+  <!-- مثال checkbox -->
+  <input type="checkbox" class="check" id="flight">
+  <input type="checkbox" class="check" id="meteorology">
+
+</div>
+
+<!-- ================= PAGE 3 ================= -->
+<div class="page" id="page3">
+  <img src="page3.jpg">
+</div>
+
+<!-- ================= PAGE 4 ================= -->
+<div class="page" id="page4">
+  <img src="page4.jpg">
+
+  <input class="field" id="signature" placeholder="Signature">
+  <input class="field" id="date">
+</div>
+
+<br>
+<button onclick="generatePDF()">Download PDF</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
