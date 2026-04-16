@@ -1,39 +1,138 @@
+:root {
+  --page-width: 794px;
+  --page-height: 1123px;
+  --input-font: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f3f5;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 920px;
+  margin: 28px auto 36px;
+  padding: 0 12px;
+}
+
+.page-header {
   text-align: center;
-  background: #eee;
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #4b5563;
 }
 
 .page {
   position: relative;
-  width: 800px;
-  margin: 20px auto;
+  width: var(--page-width);
+  height: var(--page-height);
+  margin: 0 auto 22px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
 }
 
-.page img {
-  width: 100%;
-}
+.bg-page1 { background-image: url("page1.jpg"); }
+.bg-page2 { background-image: url("page2.jpg"); }
+.bg-page3 { background-image: url("page3.jpg"); }
+.bg-page4 { background-image: url("page4.jpg"); }
 
-/* الحقول */
 .field {
   position: absolute;
-  border: none;
-  background: transparent;
-  font-size: 12px;
+  height: 28px;
+  padding: 3px 8px;
+  border: 1px solid rgba(31, 41, 55, 0.28);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #0f172a;
+  font-size: var(--input-font);
+  outline: none;
 }
 
-/* مثال مواقع (سنعدلها لاحقًا بدقة) */
-#name { top: 420px; left: 150px; width: 200px; }
-#license { top: 390px; left: 150px; width: 200px; }
-#email { top: 500px; left: 150px; width: 200px; }
-#phone { top: 530px; left: 150px; width: 200px; }
+.field:focus {
+  border-color: rgba(37, 99, 235, 0.65);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+}
 
-.check {
+.field::placeholder {
+  color: rgba(15, 23, 42, 0.58);
+}
+
+#name { top: 380px; left: 178px; width: 430px; }
+#license { top: 427px; left: 178px; width: 250px; }
+#email { top: 427px; left: 442px; width: 292px; }
+#phone { top: 474px; left: 178px; width: 250px; }
+#address { top: 474px; left: 442px; width: 292px; }
+#nationality { top: 521px; left: 178px; width: 250px; }
+#dob { top: 521px; left: 442px; width: 292px; }
+
+.exam-check {
   position: absolute;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.18);
 }
 
-/* مثال checkbox */
-#flight { top: 300px; left: 120px; }
-#meteorology { top: 330px; left: 120px; }
+.exam-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: #111827;
+  margin: 0;
+}
 
-#signature { top: 250px; left: 100px; width: 200px; }
-#date { top: 250px; left: 500px; width: 150px; }
+#exam-atpl { top: 316px; left: 122px; }
+#exam-cpl { top: 356px; left: 122px; }
+#exam-ppl { top: 396px; left: 122px; }
+#exam-ifr { top: 436px; left: 122px; }
+#exam-meteorology { top: 476px; left: 122px; }
+#exam-navigation { top: 516px; left: 122px; }
+#exam-airlaw { top: 556px; left: 122px; }
+#exam-humanfactors { top: 596px; left: 122px; }
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#downloadPdf {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+#downloadPdf:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+}
+
+#downloadPdf:active {
+  transform: translateY(1px);
+}

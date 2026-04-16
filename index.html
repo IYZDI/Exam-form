@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Exam Form</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Form Filler</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-
 <body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Exam Form Filler</h1>
+      <p>Complete the form and download a 4-page PDF.</p>
+    </header>
 
-<h2>Exam Form Filler</h2>
+    <section class="page bg-page1" id="page1" aria-label="Exam form page 1">
+      <input class="field" id="name" type="text" placeholder="Full Name" autocomplete="name">
+      <input class="field" id="license" type="text" placeholder="License Number">
+      <input class="field" id="email" type="email" placeholder="Email" autocomplete="email">
+      <input class="field" id="phone" type="tel" placeholder="Phone Number" autocomplete="tel">
+      <input class="field" id="address" type="text" placeholder="Address" autocomplete="street-address">
+      <input class="field" id="nationality" type="text" placeholder="Nationality">
+      <input class="field" id="dob" type="text" placeholder="Date of Birth (DD/MM/YYYY)">
+    </section>
 
-<!-- ================= PAGE 1 ================= -->
-<div class="page" id="page1">
-  <img src="page1.jpg">
+    <section class="page bg-page2" id="page2" aria-label="Exam form page 2">
+      <label class="exam-check" id="exam-atpl"><input type="checkbox" aria-label="ATPL exam"></label>
+      <label class="exam-check" id="exam-cpl"><input type="checkbox" aria-label="CPL exam"></label>
+      <label class="exam-check" id="exam-ppl"><input type="checkbox" aria-label="PPL exam"></label>
+      <label class="exam-check" id="exam-ifr"><input type="checkbox" aria-label="IFR exam"></label>
+      <label class="exam-check" id="exam-meteorology"><input type="checkbox" aria-label="Meteorology exam"></label>
+      <label class="exam-check" id="exam-navigation"><input type="checkbox" aria-label="Navigation exam"></label>
+      <label class="exam-check" id="exam-airlaw"><input type="checkbox" aria-label="Air Law exam"></label>
+      <label class="exam-check" id="exam-humanfactors"><input type="checkbox" aria-label="Human Factors exam"></label>
+    </section>
 
-  <input class="field" id="name" placeholder="Name">
-  <input class="field" id="license" placeholder="License">
-  <input class="field" id="email" placeholder="Email">
-  <input class="field" id="phone" placeholder="Phone">
+    <section class="page bg-page3" id="page3" aria-label="Exam form page 3"></section>
 
-</div>
+    <section class="page bg-page4" id="page4" aria-label="Exam form page 4"></section>
 
-<!-- ================= PAGE 2 ================= -->
-<div class="page" id="page2">
-  <img src="page2.jpg">
+    <div class="actions">
+      <button id="downloadPdf" type="button">Download PDF</button>
+    </div>
+  </main>
 
-  <!-- مثال checkbox -->
-  <input type="checkbox" class="check" id="flight">
-  <input type="checkbox" class="check" id="meteorology">
-
-</div>
-
-<!-- ================= PAGE 3 ================= -->
-<div class="page" id="page3">
-  <img src="page3.jpg">
-</div>
-
-<!-- ================= PAGE 4 ================= -->
-<div class="page" id="page4">
-  <img src="page4.jpg">
-
-  <input class="field" id="signature" placeholder="Signature">
-  <input class="field" id="date">
-</div>
-
-<br>
-<button onclick="generatePDF()">Download PDF</button>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
